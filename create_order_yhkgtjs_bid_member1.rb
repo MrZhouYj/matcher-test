@@ -2,6 +2,7 @@ require 'uri'
 require 'net/http'
 require 'digest'
 require 'json'
+require './Member.rb'
 
 @email  = "ceshi_matcher_1@qq.com"
 @market_id = "yhkgtjs"
