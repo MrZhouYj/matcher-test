@@ -39,6 +39,7 @@ class Member
       volume: volume
     }
 
+    sleep 0.1
     url = URI.parse("http://new-matcher.test-sctajik.top/#{@market_id}/create_limit_order")
     params = params.merge({signature: get_signature(params)})
     p params

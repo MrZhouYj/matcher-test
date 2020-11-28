@@ -4,19 +4,12 @@ require 'digest'
 require 'json'
 require './Member.rb'
 
-@email  = "ceshi_matcher_3@qq.com"
+@email  = "matcher_yhkg_1@test.com"
 
 m = Member.new(email: @email, market_id: 'yhkgtjs')
 m.cancel_all_orders
 
-@email  = "ceshi_matcher_4@qq.com"
+@email  = "matcher_yhkg_2@test.com"
 m = Member.new(email: @email, market_id: 'yhkgtjs')
 m.cancel_all_orders
 
-@email  = "ceshi_matcher_5@qq.com"
-m = Member.new(email: @email, market_id: 'zayltjs')
-m.cancel_all_orders
-
-@email  = "ceshi_matcher_6@qq.com"
-m = Member.new(email: @email, market_id: 'zayltjs')
-m.cancel_all_orders

@@ -1,10 +1,10 @@
 
-kill -9 "$(ps -ef | grep create_order_yhkgtjs_ask_member3 | grep -v 'grep'| awk 'FNR ==1 {print $2}')"
-kill -9 "$(ps -ef | grep create_order_yhkgtjs_ask_member4 | grep -v 'grep'| awk 'FNR ==1 {print $2}')"
-kill -9 "$(ps -ef | grep create_order_yhkgtjs_bid_member3 | grep -v 'grep'| awk 'FNR ==1 {print $2}')"
-kill -9 "$(ps -ef | grep create_order_yhkgtjs_bid_member4 | grep -v 'grep'| awk 'FNR ==1 {print $2}')"
+kill -9 "$(ps -ef | grep create_order_yhkgtjs_ask_member1 | grep -v 'grep'| awk 'FNR ==1 {print $2}')"
+kill -9 "$(ps -ef | grep create_order_yhkgtjs_ask_member2 | grep -v 'grep'| awk 'FNR ==1 {print $2}')"
+kill -9 "$(ps -ef | grep create_order_yhkgtjs_bid_member1 | grep -v 'grep'| awk 'FNR ==1 {print $2}')"
+kill -9 "$(ps -ef | grep create_order_yhkgtjs_bid_member2 | grep -v 'grep'| awk 'FNR ==1 {print $2}')"
 
-kill -9 "$(ps -ef | grep create_order_zayltjs_ask_member5 | grep -v 'grep'| awk 'FNR ==1 {print $2}')"
-kill -9 "$(ps -ef | grep create_order_zayltjs_ask_member6 | grep -v 'grep'| awk 'FNR ==1 {print $2}')"
-kill -9 "$(ps -ef | grep create_order_zayltjs_bid_member5 | grep -v 'grep'| awk 'FNR ==1 {print $2}')"
-kill -9 "$(ps -ef | grep create_order_zayltjs_bid_member6 | grep -v 'grep'| awk 'FNR ==1 {print $2}')"
+#kill -9 "$(ps -ef | grep create_order_zayltjs_ask_member5 | grep -v 'grep'| awk 'FNR ==1 {print $2}')"
+#kill -9 "$(ps -ef | grep create_order_zayltjs_ask_member6 | grep -v 'grep'| awk 'FNR ==1 {print $2}')"
+#kill -9 "$(ps -ef | grep create_order_zayltjs_bid_member5 | grep -v 'grep'| awk 'FNR ==1 {print $2}')"
+#kill -9 "$(ps -ef | grep create_order_zayltjs_bid_member6 | grep -v 'grep'| awk 'FNR ==1 {print $2}')"
