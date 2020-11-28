@@ -7,7 +7,7 @@ class Member
 
   def initialize options = {}
     email = options[:email]
-    @market_id = options[:market_id]
+    @market_id = options[:market_id] || 'yhkgtjs'
 
     url = URI.parse("http://api.test-sctajik.top/mobile_api/v2/common/get_member_public_key?email=#{email}")
     response = Net::HTTP.get(url)
