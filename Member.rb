@@ -45,10 +45,10 @@ class Member
     if response.code == "200"
       resp = JSON(response.body)
       p resp
-      if resp["code"] == 20000
-        return true
-      else
+      if resp["message"] == '休市'
         return false
+      else
+        return true
       end
     end
     false
