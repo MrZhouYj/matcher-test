@@ -7,12 +7,13 @@ class Member
 
   def initialize options = {}
     email = options[:email]
+    @market_id = options[:market_id]
+
     url = URI.parse("http://api.test-sctajik.top/mobile_api/v2/common/get_member_public_key?email=#{email}")
     response = Net::HTTP.get(url)
     json_body = JSON.parse(response)
     @public_key = json_body['public_key']
     @private_key = json_body['private_key']
-    @market_id = "yhkgtjs"
   end
 
   def get_signature(hash)
@@ -38,7 +39,7 @@ class Member
       volume: volume
     }
 
-    url = URI.parse("http://new-matcher.test-sctajik.top/yhkgtjs/create_limit_order")
+    url = URI.parse("http://new-matcher.test-sctajik.top/#{@market_id}/create_limit_order")
     params = params.merge({signature: get_signature(params)})
     p params
     response = Net::HTTP.post_form(url, params)
