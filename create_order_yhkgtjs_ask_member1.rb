@@ -3,9 +3,8 @@ require 'net/http'
 require 'digest'
 require 'json'
 
-# newmatcher1@qq.com
-@public_key = "adbc2544-50d5-4762-bac9-e8595b6a1c56"
-@private_key = "fa266179-0f2d-43f4-9790-97c10c53b426"
+@public_key = "4f4de1ab-4553-46bf-8c8e-c5fee2b53876"
+@private_key = "5bdbb75d-4448-418f-9963-dc01a4376808"
 
 @market_id = "yhkgtjs"
 
@@ -54,9 +53,6 @@ end
 loop do
     p '开始挂卖单'
     create_order  true,  (1+rand(1000)/100),  9 + rand(100)/50.0.round(2)
-    if @success_count > 100
-      break
-    end
 end
 
 

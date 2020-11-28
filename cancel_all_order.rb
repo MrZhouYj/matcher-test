@@ -3,8 +3,6 @@ require 'net/http'
 require 'digest'
 require 'json'
 
-#@public_key = "3b1b298a-519f-40ab-9292-26a03f5b9e33"
-#@private_key = "b58cce4f-f9c0-4746-9e19-5d27ac4f1a28"
 
 @public_key = "adbc2544-50d5-4762-bac9-e8595b6a1c56"
 @private_key = "fa266179-0f2d-43f4-9790-97c10c53b426"

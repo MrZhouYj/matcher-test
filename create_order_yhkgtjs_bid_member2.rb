@@ -3,8 +3,8 @@ require 'net/http'
 require 'digest'
 require 'json'
 
-@public_key = "4f4de1ab-4553-46bf-8c8e-c5fee2b53876"
-@private_key = "5bdbb75d-4448-418f-9963-dc01a4376808"
+@public_key = "936f37fd-0c2e-400b-8309-748d0e0db720"
+@private_key = "73ee5d57-ccbc-4d0a-bfdf-09903ee50038"
 
 @market_id = "yhkgtjs"
 
