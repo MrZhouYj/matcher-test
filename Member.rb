@@ -53,5 +53,22 @@ class Member
     end
     false
   end
+
+  def cancel_all_orders
+    params = {
+      lang: "zh",
+      market_id: @market_id,
+      nonce: Time.now.to_i,
+      public_key: @public_key,
+    }
+
+    url = URI.parse("http://new-matcher.test-sctajik.top/yhkgtjs/cancel_all_orders")
+    params = params.merge({signature: get_signature(params)})
+    response = Net::HTTP.post_form(url, params)
+    if response.code == "200"
+      resp = JSON(response.body)
+      p resp
+    end
+  end
 end
 
