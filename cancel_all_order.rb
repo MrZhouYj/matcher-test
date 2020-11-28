@@ -3,9 +3,10 @@ require 'net/http'
 require 'digest'
 require 'json'
 
+#matcher_test2@test.com
 
-@public_key = "adbc2544-50d5-4762-bac9-e8595b6a1c56"
-@private_key = "fa266179-0f2d-43f4-9790-97c10c53b426"
+@public_key = "7cae88a4-fa70-4842-b194-14a805c8341b"
+@private_key = "34ce756a-0c14-44d1-9e6a-299aa186fb45"
 
 @market_id = "yhkgtjs"
 
