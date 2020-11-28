@@ -3,10 +3,15 @@ require 'net/http'
 require 'digest'
 require 'json'
 
-@public_key = "4f4de1ab-4553-46bf-8c8e-c5fee2b53876"
-@private_key = "5bdbb75d-4448-418f-9963-dc01a4376808"
-
+@email  = ""
 @market_id = "yhkgtjs"
+
+m = Member.new(email: @email)
+
+@public_key = m.public_key
+@private_key = m.private_key
+
+
 
 @reference_price = 10
 @success_count = 0 #挂单成功次数

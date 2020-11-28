@@ -3,10 +3,13 @@ require 'net/http'
 require 'digest'
 require 'json'
 
-#matcher_test2@test.com
+@email  = ""
+@market_id = "yhkgtjs"
 
-@public_key = "7cae88a4-fa70-4842-b194-14a805c8341b"
-@private_key = "34ce756a-0c14-44d1-9e6a-299aa186fb45"
+m = Member.new(email: @email)
+
+@public_key = m.public_key
+@private_key = m.private_key
 
 @market_id = "yhkgtjs"
 
