@@ -1,0 +1,5 @@
+
+nohup ruby create_order_yhkgtjs_ask_member1.rb > log/ask_member1.log &
+nohup ruby create_order_yhkgtjs_ask_member2.rb > log/ask_member2.log &
+nohup ruby create_order_yhkgtjs_bid_member1.rb > log/bid_member1.log &
+nohup ruby create_order_yhkgtjs_bid_member2.rb > log/bid_member2.log &
