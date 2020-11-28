@@ -1,3 +1,0 @@
-{:lang=>"zh", :market_id=>"yhkgtjs", :nonce=>1606551288, :public_key=>"adbc2544-50d5-4762-bac9-e8595b6a1c56", :signature=>"55cd64c746678ec94066f6924de6fae2"}
-#<Net::HTTPOK 200 OK readbody=true>
-{"code"=>20000, "message"=>"取消全部订单成功"}
