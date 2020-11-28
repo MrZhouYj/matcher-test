@@ -3,7 +3,7 @@ require 'net/http'
 require 'digest'
 require 'json'
 
-@email  = ""
+@email  = "ceshi_matcher_1@qq.com"
 @market_id = "yhkgtjs"
 
 m = Member.new(email: @email)

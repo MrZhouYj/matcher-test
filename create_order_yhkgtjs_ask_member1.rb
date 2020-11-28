@@ -4,7 +4,7 @@ require 'digest'
 require 'json'
 require './Member.rb'
 
-@email  = ""
+@email  = "ceshi_matcher_1@qq.com"
 @market_id = "yhkgtjs"
 
 m = Member.new(email: @email)
@@ -12,8 +12,6 @@ m = Member.new(email: @email)
 @public_key = m.public_key
 @private_key = m.private_key
 
-
-@reference_price = 10
 @success_count = 0 #挂单成功次数
 
 # 下单接口
