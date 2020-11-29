@@ -4,7 +4,7 @@ require 'digest'
 require 'json'
 require './Member.rb'
 
-@email  = "new-matcher_yhkg_2@test.com"
+@email  = "test-20201129-2@test.com"
 m = Member.new(email: @email)
 
 @count = 0
