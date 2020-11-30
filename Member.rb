@@ -1,5 +1,6 @@
-require 'net/http'
 require 'uri'
+require 'net/http'
+require 'digest'
 require 'json'
 
 
@@ -8,10 +9,13 @@ class Member
   def initialize options = {}
     email = options[:email]
     @market_id = options[:market_id] || 'yhkgtjs'
+    p email
 
     url = URI.parse("http://api.test-sctajik.top/mobile_api/v2/common/get_member_public_key?email=#{email}")
     response = Net::HTTP.get(url)
+    p response
     json_body = JSON.parse(response)
+    p json_body
     @public_key = json_body['public_key']
     @private_key = json_body['private_key']
   end
@@ -34,7 +38,7 @@ class Member
       lang: "zh",
       market_id: @market_id,
       nonce: Time.now.to_i,
-      price: price,
+      price: price.round(2),
       public_key: @public_key,
       volume: volume
     }

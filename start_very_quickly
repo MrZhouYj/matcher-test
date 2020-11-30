@@ -1,0 +1,10 @@
+
+for i in {1..5}; do
+  #nohup ruby create_order_yhkgtjs_ask_member1.rb > log/ask_member1.log &
+  #nohup ruby create_order_yhkgtjs_bid_member1.rb > log/bid_member1.log &
+  nohup ruby create_order_yhkgtjs.rb > log/111111.log &
+
+done
+
+
+
