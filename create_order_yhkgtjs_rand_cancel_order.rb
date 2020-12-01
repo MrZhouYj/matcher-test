@@ -1,8 +1,9 @@
 
 require './Member.rb'
 
-@email  = "test_1130_2@test.com"
+@email  = "test_1201_4@test.com"
 m = Member.new(email: @email)
+
 
 orders = [
       {
@@ -82,6 +83,13 @@ orders = [
       }
 ]
 
+orders = [
+      {
+        price_ratio: -0.15,
+        volume: 0.445,
+      }
+]
+
 @count = 0
 loop do
   p '开始挂单'
@@ -96,6 +104,9 @@ loop do
     is_continue = m.create_order  is_ask,  volume, price
     @count += 1
     p @count
+    if @count % 10 == 0
+      m.rand_cancel_a_order
+    end
     # 休市之后自动停止脚本
     break if is_continue == false
     sleep 0.5

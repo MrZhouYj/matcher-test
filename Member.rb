@@ -9,7 +9,7 @@ class Member
   def initialize options = {}
     email = options[:email]
     @market_id = options[:market_id] || 'yhkgtjs'
-    p email
+    @orders = []
 
     url = URI.parse("http://api.test-sctajik.top/mobile_api/v2/common/get_member_public_key?email=#{email}")
     response = Net::HTTP.get(url)
@@ -33,6 +33,7 @@ class Member
 
   def create_order is_ask, volume, price
 
+    p '创建订单'
     params = {
       is_ask: is_ask,
       lang: "zh",
@@ -43,24 +44,51 @@ class Member
       volume: volume
     }
 
-    sleep 0.1
     url = URI.parse("http://new-matcher.test-sctajik.top/#{@market_id}/create_limit_order")
     params = params.merge({signature: get_signature(params)})
     p params
     response = Net::HTTP.post_form(url, params)
+    p response
     if response.code == "200"
       resp = JSON(response.body)
       p resp
       if resp["message"] == '休市'
         return false
       else
+        @orders << resp["order_id"]
         return true
       end
     end
     false
   end
 
+  def rand_cancel_a_order
+      cancel_a_order @orders.last
+  end
+
+  def cancel_a_order id
+
+    p '取消订单'
+    params = {
+      id: id,
+      lang: "zh",
+      nonce: Time.now.to_i,
+      public_key: @public_key,
+    }
+    p params
+
+    url = URI.parse("http://new-matcher.test-sctajik.top/#{@market_id}/cancel_order")
+    params = params.merge({signature: get_signature(params)})
+    response = Net::HTTP.post_form(url, params)
+    p response
+    if response.code == "200"
+      resp = JSON(response.body)
+      p resp
+    end
+  end
+
   def cancel_all_orders
+
     params = {
       lang: "zh",
       market_id: @market_id,
@@ -71,6 +99,7 @@ class Member
     url = URI.parse("http://new-matcher.test-sctajik.top/yhkgtjs/cancel_all_orders")
     params = params.merge({signature: get_signature(params)})
     response = Net::HTTP.post_form(url, params)
+    p response
     if response.code == "200"
       resp = JSON(response.body)
       p resp
