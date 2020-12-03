@@ -63,7 +63,7 @@ class Member
   end
 
   def rand_cancel_a_order
-      cancel_a_order @orders.last
+    cancel_a_order @orders[rand(@orders.length)]
   end
 
   def cancel_a_order id

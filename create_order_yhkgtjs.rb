@@ -1,7 +1,7 @@
 
 require './Member.rb'
 
-@email  = "test_1130_2@test.com"
+@email  = "test_1130_3@test.com"
 m = Member.new(email: @email)
 
 orders = [
@@ -98,7 +98,7 @@ loop do
     p @count
     # 休市之后自动停止脚本
     break if is_continue == false
-    sleep 0.5
+    sleep 500
   end
 end
 
