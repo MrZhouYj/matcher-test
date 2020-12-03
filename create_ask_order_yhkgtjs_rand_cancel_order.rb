@@ -104,7 +104,7 @@ loop do
     is_continue = m.create_order  is_ask,  volume, price
     @count += 1
     p @count
-    if @count % 3 == 0
+    if @count % 5 == 0
       m.rand_cancel_a_order
     end
     # 休市之后自动停止脚本
