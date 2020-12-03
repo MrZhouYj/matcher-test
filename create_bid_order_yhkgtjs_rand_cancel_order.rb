@@ -1,7 +1,7 @@
 
 require './Member.rb'
 
-@email  = "test_1203_1@matcher.com"
+@email  = "test_1203_2@matcher.com"
 m = Member.new(email: @email)
 
 
@@ -99,7 +99,7 @@ loop do
     volume = (volume + ( 1 + rand(90))).round(0)
     price = ((1 + price_ratio*0.1) * 10).round(2)
     # 开始挂单
-    is_ask = rand(2) ==1 ? true: false
+    is_ask =  false
     p "#{is_ask ? '卖单': '买单'} 价格 #{price} 数量 #{volume}"
     is_continue = m.create_order  is_ask,  volume, price
     @count += 1

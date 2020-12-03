@@ -1,9 +1,7 @@
 
-for i in {1..10}; do
-  #nohup ruby create_order_yhkgtjs_ask_member1.rb > log/ask_member1.log &
-  #nohup ruby create_order_yhkgtjs_bid_member1.rb > log/bid_member1.log &
-  #nohup ruby create_order_yhkgtjs.rb > log/create_order_yhkgtjs.log &
-  nohup ruby create_order_yhkgtjs_rand_cancel_order.rb > log/create_order_yhkgtjs_rand_cancel_order_1201.log &
+for i in {1..15}; do
+  nohup ruby create_bid_order_yhkgtjs_rand_cancel_order.rb > log/create_bid_order_yhkgtjs_rand_cancel_order.log &
+  nohup ruby create_ask_order_yhkgtjs_rand_cancel_order.rb > log/create_ask_order_yhkgtjs_rand_cancel_order.log &
 done
 
 

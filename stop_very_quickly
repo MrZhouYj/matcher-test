@@ -1,8 +1,6 @@
 
-for i in {1..15}; do
-  #kill -9 "$(ps -ef | grep create_order_yhkgtjs_ask_member1 | grep -v 'grep'| awk 'FNR ==1 {print $2}')"
-  #kill -9 "$(ps -ef | grep create_order_yhkgtjs_bid_member1 | grep -v 'grep'| awk 'FNR ==1 {print $2}')"
-  #kill -9 "$(ps -ef | grep create_order_yhkgtjs| grep -v 'grep'| awk 'FNR ==1 {print $2}')"
-  kill -9 "$(ps -ef | grep create_order_yhkgtjs_rand_cancel_order| grep -v 'grep'| awk 'FNR ==1 {print $2}')"
+for i in {1..20}; do
+  kill -9 "$(ps -ef | grep create_ask_order_yhkgtjs_rand_cancel_order| grep -v 'grep'| awk 'FNR ==1 {print $2}')"
+  kill -9 "$(ps -ef | grep create_bid_order_yhkgtjs_rand_cancel_order| grep -v 'grep'| awk 'FNR ==1 {print $2}')"
 done
 
