@@ -83,12 +83,6 @@ orders = [
       }
 ]
 
-orders = [
-      {
-        price_ratio: -0.15,
-        volume: 0.445,
-      }
-]
 
 @count = 0
 loop do

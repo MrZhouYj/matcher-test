@@ -83,12 +83,6 @@ orders = [
       }
 ]
 
-orders = [
-      {
-        price_ratio: -0.15,
-        volume: 0.445,
-      }
-]
 
 @count = 0
 loop do
@@ -97,7 +91,7 @@ loop do
     price_ratio = order[:price_ratio].to_f
     volume = order[:volume].to_f
     volume = (volume + ( 1 + rand(90))).round(0)
-    price = ((1 + price_ratio*0.1) * 10).round(2)
+    price = ((1 + price_ratio*0.1) * 10)
     # 开始挂单
     is_ask = true
     p "#{is_ask ? '卖单': '买单'} 价格 #{price} 数量 #{volume}"
